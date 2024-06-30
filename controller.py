@@ -75,7 +75,7 @@ class Controller:
             # shift
             w_prime = self.shifter(w_prime, direction, amount)
         # generate the image
-        img = self.generator.get_img(w_prime)
+        img = self.generate_img_from_w_vec(w_prime)
         # convert image (use size=Config.gui.display_size)
         img = convert_image(img, Config.gui.display_size)
         # convert image to bits
